@@ -7,7 +7,7 @@ small_table = pd.read_csv('committee_names_unedited_excludes_candidate_control_c
 big_table = pd.read_csv('funding_committees_includes_candidate_control.csv')
 
 # We don't need these for deduping
-small_table = small_table.drop('ID', axis=1)
+#small_table = small_table.drop('ID', axis=1)
 big_table = big_table.drop('ID', axis=1)
 
 # When we actually do the join
