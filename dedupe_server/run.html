@@ -1,0 +1,25 @@
+
+<head>
+  <script>
+    console.log("aoeu");
+  </script>
+</head>
+
+<body>
+  {% for pair in record_pair %}
+    <p>
+      {% for field in fields %}
+        {{ field }} : {{ pair[field] }}<br/>
+      {% endfor %}
+    </p>
+  {% endfor %}
+  <p>
+    Are these records the same?
+  </p>
+  <form action="/run/submit" method="POST">
+    <button name="answer" type="submit" value="y">Yes</button>
+    <button name="answer" type="submit" value="n">No</button>
+    <button name="answer" type="submit" value="u">Can't tell</button>
+  </form>
+</body>
+
