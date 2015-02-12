@@ -1,9 +1,5 @@
 
-import os
-import sys
-import collections
-import logging
-import optparse
+import sqlite3
 from numpy import nan
 
 from bottle import route, run, jinja2_view, request, redirect
@@ -32,5 +28,6 @@ def dedupe_submit():
   print request.forms.get('answer')
   redirect('/run')
 
-print 'starting server...'
-run(host='localhost', port=8080)
+if __name__ == '__main__':
+  print 'starting server...'
+  run(host='localhost', port=8080)

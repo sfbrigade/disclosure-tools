@@ -29,8 +29,8 @@ def readData(filename):
     with open(filename) as f:
         reader = csv.DictReader(f)
         for row in reader:
-            clean_row = [(k, preProcess(v)) for (k, v) in row.items()]
-            row_id = int(row['Id'])
+            clean_row = [(k.lower().replace(' ', '_'), preProcess(v)) for (k, v) in row.items()]
+            row_id = int(row['ID'])
             data_d[row_id] = dict(clean_row)
 
     return data_d
