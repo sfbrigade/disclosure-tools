@@ -29,5 +29,8 @@ def dedupe_submit():
   redirect('/run')
 
 if __name__ == '__main__':
+	'''
+	To access the server from your browser, go to: http://localhost:8080/run
+	'''
   print 'starting server...'
   run(host='localhost', port=8080)
