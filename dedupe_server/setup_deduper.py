@@ -52,10 +52,10 @@ def setup_deduper():
   # Notice how we are telling dedupe to use a custom field comparator
   # for the 'Zip' field. 
   fields = [
-      {'field' : 'Site name', 'type': 'String'},
-      {'field' : 'Address', 'type': 'String'},
-      {'field' : 'Zip', 'type': 'Exact', 'has missing' : True},
-      {'field' : 'Phone', 'type': 'String', 'has missing' : True},
+      {'field' : 'site_name', 'type': 'String'},
+      {'field' : 'address', 'type': 'String'},
+      {'field' : 'zip', 'type': 'Exact', 'has missing' : True},
+      {'field' : 'phone', 'type': 'String', 'has missing' : True},
       ]
 
   # Create a new deduper object and pass our data model to it.
