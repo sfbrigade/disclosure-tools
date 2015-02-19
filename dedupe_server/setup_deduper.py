@@ -30,7 +30,13 @@ def readData(filename):
         reader = csv.DictReader(f)
         for row in reader:
             clean_row = [(k.lower().replace(' ', '_'), preProcess(v)) for (k, v) in row.items()]
-            row_id = int(row['ID'])
+            try:
+              row_id = int(row['ID'])
+            except KeyError:
+              try:
+                row_id = int(row['Id'])
+              except KeyError:
+                row_id = int(row['id'])
             data_d[row_id] = dict(clean_row)
 
     return data_d
